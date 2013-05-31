@@ -35621,3 +35621,116 @@ Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
 
 Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-31 17:09:06 +0200
 Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 17:36:18 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in C:/Sites/web/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Aperoinsa</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___91391047_28757388'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (18.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 17:36:23 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in C:/Sites/web/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Aperoinsa</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___91391047_28757388'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 17:42:19 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 186ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in C:/Sites/web/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Aperoinsa</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___17420626_28367808'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 17:45:32 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 370ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in C:/Sites/web/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Aperoinsa</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__61207463_39527976'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 17:45:34 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in C:/Sites/web/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Aperoinsa</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__61207463_39527976'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (17.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.0ms)
