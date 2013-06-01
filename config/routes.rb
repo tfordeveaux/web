@@ -1,9 +1,18 @@
 Insarce2::Application.routes.draw do
+
+
+ get 'contact', :to => 'pages#contact', :as => "contact"
+
+  get 'aide', :to => 'pages#aide', :as => "aide"
+  
+  get 'about', :to => 'pages#about', :as => "about"
+
   devise_for :users
 
   get "home/index"
 
-  resources :aperos
+    resources :aperos 
+    
 
 
   # The priority is based upon order of creation:

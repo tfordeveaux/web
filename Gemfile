@@ -17,8 +17,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'twitter-bootstrap-rails'
-  gem "therubyracer"
-  gem "less-rails"
+
 
 
 
@@ -46,6 +45,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# To use debugger
+# gem 'debugger'
+r'
 
 # To use debugger
 # gem 'debugger'

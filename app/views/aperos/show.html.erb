@@ -15,7 +15,7 @@
   <dt><strong><%= model_class.human_attribute_name(:visibility) %>:</strong></dt>
   <dd><%= @apero.visibility %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @apero.user_id %></dd>
+  <dd><%= User.find(@apero.user_id).email %></dd>
   <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
   <dd><%= @apero.category_id %></dd>
 </dl>
