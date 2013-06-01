@@ -23,7 +23,7 @@
           <a class="brand" href="<%= root_url %>">Insapéro</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="<%= aperos_path %>">Home</a></li>
+              <li class="active"><a href="<%= aperos_path %>">Events</a></li>
               <li><a href="<%= new_apero_path %>">Créer un apéro</a></li>
               <li><a href="#contact">Contact</a></li>
               <li class="dropdown">
@@ -98,16 +98,14 @@
 
    <div class="container">
     <div class="row">
-        <div class="span9"><%= yield %>
+        <div class="span12"><%= yield %>
         </div>
-      <div class="span3">
-        <h2>About Us</h2>
-        
-      </div>
     </div>
   </div>
-
-
-
+ <footer class="row">
+    <p>Web design par studio des délires enchantés...</p>
+  </footer>
 </body>
+
+
 </html>

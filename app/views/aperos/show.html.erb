@@ -1,41 +1,33 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Apero -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @apero.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @apero.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
+  <dd><%= @apero.content %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date) %>:</strong></dt>
+  <dd><%= @apero.date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hour) %>:</strong></dt>
+  <dd><%= @apero.hour %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:visibility) %>:</strong></dt>
+  <dd><%= @apero.visibility %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @apero.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
+  <dd><%= @apero.category_id %></dd>
+</dl>
 
-<p>
-  <b>Content:</b>
-  <%= @apero.content %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @apero.date %>
-</p>
-
-<p>
-  <b>Hour:</b>
-  <%= @apero.hour %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= User.find(@apero.user_id).email %>
-</p>
-
-<p>
-  <b>Visibility:</b>
-  <%= @apero.visibility %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= Category.find(@apero.category_id).name %>
-</p>
-
-<% if can? :edit, @apero %>
-<%= link_to 'Modifier', edit_apero_path(@apero) %> |
-<% end %> 
-<%= link_to 'Retour', aperos_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              aperos_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_apero_path(@apero), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              apero_path(@apero),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

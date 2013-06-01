@@ -1,40 +1,48 @@
-<h1>Liste des soirées à venir</h1>
-
-<table>
-  <tr>
-    <th>Nom</th>
-    <th>Description</th>
-    <th>Date</th>
-    <th>Heure</th>
-    <th>Créateur</th>
-    <th>Visibilité</th>
-    <th>Categorie</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @aperos.each do |apero| %>
-  <tr>
-    <td><%= apero.name %></td>
-    <td><%= apero.content %></td>
-    <td><%= apero.date %></td>
-    <td><%= apero.hour %></td>
-    <td><%= User.find(apero.user_id).email %></td>
-    <td><%= apero.visibility %></td>
-    <td><%= Category.find(apero.category_id).name %></td>
-    <td><%= link_to 'Voir', apero %> </td>
-    <td><% if can? :edit, apero %>
-        <%= link_to 'Modifier', edit_apero_path(apero) %>
-          <% end %>  </td>
-    <td><% if can? :destroy, apero %>
-        <%= link_to 'Détruire', apero, method: :delete, data: { confirm: 'Etes vous sûr?' } %>
-          <% end %> 
-    </td>
-  </tr>
-<% end %>
+<%- model_class = Apero -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:content) %></th>
+      <th><%= model_class.human_attribute_name(:date) %></th>
+      <th><%= model_class.human_attribute_name(:hour) %></th>
+      <th><%= model_class.human_attribute_name(:visibility) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:category_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @aperos.each do |apero| %>
+      <tr>
+        <td><%= link_to apero.id, apero_path(apero) %></td>
+        <td><%= apero.name %></td>
+        <td><%= apero.content %></td>
+        <td><%= apero.date %></td>
+        <td><%= apero.hour %></td>
+        <td><%= apero.visibility %></td>
+        <td><%= apero.user_id %></td>
+        <td><%= apero.category_id %></td>
+        <td><%=l apero.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_apero_path(apero), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      apero_path(apero),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'Créer un nouvel apéro', new_apero_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_apero_path,
+            :class => 'btn btn-primary' %>
