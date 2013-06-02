@@ -1,11 +1,14 @@
 class AperosController < ApplicationController
   # GET /aperos
   # GET /aperos.json
+
+  helper_method :sort_column, :sort_direction
   before_filter :authenticate_user!, :except => [:index]
   load_and_authorize_resource
+
   def index
  
-    @aperos = Apero.all
+    @aperos = Apero.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -83,5 +86,15 @@ class AperosController < ApplicationController
       format.html { redirect_to aperos_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  
+  def sort_column
+    Apero.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end
