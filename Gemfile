@@ -19,6 +19,10 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 
 
+
+
+
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -44,7 +48,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
+r'
 
 # To use debugger
 # gem 'debugger'
